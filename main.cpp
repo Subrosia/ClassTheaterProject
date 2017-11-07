@@ -52,7 +52,7 @@ int main() {
 		if(response == '1')
 		{
 			cout << "You have successfully purchased a ticket. Enjoy the show!" << endl;
-			soldseats++;
+			allsales++;
 		}
 		else if(response == '2')
 		{
