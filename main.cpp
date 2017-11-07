@@ -43,6 +43,7 @@ int main() {
 	
     switch (usrInput) {
         case 0:
+		    cout << "There are " << freeseats << " free seats available, and " << soldseats " seats have been sold." << endl;
             //Checkout process
             price = 150;
 		cout << "This seat will cost you: $" << price << endl;
@@ -51,6 +52,7 @@ int main() {
 		if(response == '1')
 		{
 			cout << "You have successfully purchased a ticket. Enjoy the show!" << endl;
+			soldseats++;
 		}
 		else if(response == '2')
 		{
