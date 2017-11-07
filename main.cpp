@@ -11,27 +11,40 @@ int totalSales() {
 
 int unsoldCount () {
     int freeSeats;
+	cout << "There are " << freeSeats << " free seats available." << endl;
     // function to return the amount of unsold/free seats total.
     return freeSeats;
 }
 
+int purchaseTicket () {
+	int buySeats;
+	cout << "";
+	// function to purchase seats.
+	return buySeats;
+}
+
 int soldCount () {
     int soldSeats;
+	cout << soldSeats << " seats have been sold." << endl;
     //function to return the amount of seats sold total.
     return soldSeats;
 }
 
 int main() {
     //Constant for your rows and constant for your seats with a 2d array pre-defined.
-    const ROWS = 15;
-    const SEATS = 30;
+    const int ROWS = 15;
+    const int SEATS = 30;
     int seatIndex [ROWS][SEATS];
     int usrInput; //TODO write code to recieve user input.
     //Variables to hold ticket prices, user input for rows/seats, and user input for purchasing tickets when prompted
     double price;
     int SelectedRow;
-	int SelectedSeat;
+    int SelectedSeat;
     char response;
+	usrInput = '0123';
+
+	cout << "How can we help you today? ENTER 0 = Purchase ticket, 1 = Check available seats, 2 = Check unavailable seats, 3 = Check total amount of seats sold ";
+		cin >> usrInput;
     
     //Get user input
     cout << "Please enter the row you would like to purchase a ticket for: ";
@@ -41,7 +54,6 @@ int main() {
 	
     switch (usrInput) {
         case 0:
-		    cout << "There are " << freeseats << " free seats available, and " << soldseats " seats have been sold." << endl;
             //Checkout process
             price = 150;
 		cout << "This seat will cost you: $" << price << endl;
@@ -50,7 +62,6 @@ int main() {
 		if(response == '1')
 		{
 			cout << "You have successfully purchased a ticket. Enjoy the show!" << endl;
-			allsales++;
 		}
 		else if(response == '2')
 		{
