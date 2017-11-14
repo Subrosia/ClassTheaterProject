@@ -73,7 +73,6 @@ void purchaseTicket () {
 		secondPurchase();
 		if (response == '2')
 		{
-			//this repeated
 			cout << "That is unfortunate." << endl;
 		}
 	}
